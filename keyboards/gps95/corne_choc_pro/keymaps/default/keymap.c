@@ -8,7 +8,7 @@ enum layers{_BASE,_PSYM,_FUN,_NAV,_NUM,_MOUSE,_SYM,_TRI};
 /*key overrides*/
 //const key_override_t ko_ = ko_make_basic();
 const key_override_t ko_semicolon = ko_make_basic(MOD_MASK_SHIFT,KC_COMM,KC_SCLN);//S+, -> ;
-const key_override_t ko_colon = ko_make_basic(MOD_MASK_SHIFT,RALT_T(KC_DOT),KC_COLN);//S+. -> :
+const key_override_t ko_colon = ko_make_basic(MOD_MASK_SHIFT,KC_DOT,KC_COLN);//S+. -> :
 
 //This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS]=
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, KC_LPRN, KC_LCBR, KC_LBRC, XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, KC_ESC,                          KC_BSLS, XXXXXXX, KC_RPRN, KC_RCBR, KC_RBRC, XXXXXXX,
+  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, KC_ESC,                          KC_BSLS, KC_PIPE, KC_RPRN, KC_RCBR, KC_RBRC, XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                  RALT(KC_N), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
