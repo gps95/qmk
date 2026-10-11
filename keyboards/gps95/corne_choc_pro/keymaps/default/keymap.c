@@ -118,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS]=
 //tri layer
 [_TRI] = LAYOUT_split_3x5_3_ex2(
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  RM_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_MUTE, KC_MPRV, KC_MNXT, KC_VOLU, XXXXXXX, QK_BOOT,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_MUTE, KC_MPRV, KC_MNXT, KC_VOLU, XXXXXXX, QK_BOOT,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ESC,                          XXXXXXX, XXXXXXX, KC_MPLY, KC_VOLD, XXXXXXX, XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
@@ -127,6 +127,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS]=
   XXXXXXX, XXXXXXX, XXXXXXX,                                                    XXXXXXX, XXXXXXX, XXXXXXX
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
 )};
+
+// Caps lock indicator: LED under KC_BSLS (matrix [5][6]) = LED index 39
+#define CAPS_LED 39
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min,uint8_t led_max){
+  if(host_keyboard_led_state().caps_lock) {
+    RGB_MATRIX_INDICATOR_SET_COLOR(CAPS_LED,255,0,0);
+  }
+  return true;
+}
 
 //encoder map
 #ifdef ENCODER_MAP_ENABLE
