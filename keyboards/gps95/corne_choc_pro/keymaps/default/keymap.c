@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-//todo: investigate: leader key, combos, mouse key delays,
+//todo: investigate: leader key, combos
 
 //declare layers
 enum layers{_BASE,_PSYM,_FUN,_NAV,_NUM,_MOUSE,_SYM,_TRI};
@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS]=
 //base layer
 [_BASE] = LAYOUT_split_3x5_3_ex2(
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  KC_Q, KC_W, KC_E, KC_R, KC_T, XXXXXXX,                                        KC_MUTE, KC_Z, KC_U, KC_I, KC_O, KC_P,
+  KC_Q, KC_W, KC_E, KC_R, KC_T, KC_MPLY,                                        KC_MUTE, KC_Z, KC_U, KC_I, KC_O, KC_P,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
   LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G, KC_ESC,         KC_BSLS, KC_H, LSFT_T(KC_J), LCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_QUOT),
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS]=
 //programming symbols
 [_PSYM] = LAYOUT_split_3x5_3_ex2(
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, KC_LPRN, KC_LCBR, KC_LBRC, XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX, KC_GRV, KC_LPRN, KC_LCBR, KC_LBRC, XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, KC_ESC,                          KC_BSLS, KC_PIPE, KC_RPRN, KC_RCBR, KC_RBRC, XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
@@ -81,18 +81,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS]=
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
   KC_1, KC_2, KC_3, KC_4, KC_5, XXXXXXX,                                        KC_MUTE, XXXXXXX, LSA(KC_DOT), LSA(KC_SCLN), LSA(KC_COMM), XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  KC_6, KC_7, KC_8, KC_9, KC_0, KC_ESC,                                         XXXXXXX, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+  KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,                                        KC_BSLS, KC_SLASH, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  KC_MINUS, KC_EQUAL, KC_ASTR, KC_COLN, KC_PLUS,                                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  KC_MINUS, KC_EQUAL, KC_ASTR, KC_COLN, KC_PLUS,                                XXXXXXX, XXXXXXX, XXXXXXX, KC_DOT, XXXXXXX,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  KC_TAB, KC_SPC, KC_ENT,                                                       XXXXXXX, XXXXXXX, XXXXXXX
+  KC_TAB, KC_SPC, KC_ENT,                                                       KC_SLASH, XXXXXXX, XXXXXXX
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
 ),
 
 //mouse movement
 [_MOUSE] = LAYOUT_split_3x5_3_ex2(
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_MUTE, KC_APP, XXXXXXX, MS_UP, MS_WHLU, MS_WHLD,
+  MS_ACL0, MS_ACL1, MS_ACL2, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_MUTE, KC_APP, XXXXXXX, MS_UP, MS_WHLU, MS_WHLD,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, KC_ESC,                          XXXXXXX, MS_WHLL, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLR,
 //----------------------------------------------------------------------|     |---------------------------------------------------------------------------
