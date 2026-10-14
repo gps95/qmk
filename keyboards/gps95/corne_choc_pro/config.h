@@ -5,13 +5,8 @@
 #define SPLIT_HAND_PIN GP21
 
 //for homerow mods
-#define TAPPING_TERM 175 //default 200
-//#define PERMISSIVE_HOLD  // Triggers mod if you tap another key while holding.
-//-> feels clunky,disabling
-//might break same-hand thumb mod tap:
-//#define CHORDAL_HOLD     // Constrains holds to opposite-hand combinations.
-//-> feels clunky,disabling
-// Consider also:
+#define TAPPING_TERM 175  //default 200
+#define PERMISSIVE_HOLD   // Triggers mod if you tap another key while holding.
 #define FLOW_TAP_TERM 150 // Disables holds when typing quickly.
 
 //keyboard
