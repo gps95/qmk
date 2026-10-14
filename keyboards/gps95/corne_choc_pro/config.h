@@ -5,19 +5,21 @@
 #define SPLIT_HAND_PIN GP21
 
 //for homerow mods
-#define TAPPING_TERM 200 //is default value but ok
-#define PERMISSIVE_HOLD  // Triggers mod if you tap another key while holding.
-//might break same-hand thumb mod tap
-#define CHORDAL_HOLD     // Constrains holds to opposite-hand combinations.
+#define TAPPING_TERM 175 //default 200
+//#define PERMISSIVE_HOLD  // Triggers mod if you tap another key while holding.
+//-> feels clunky,disabling
+//might break same-hand thumb mod tap:
+//#define CHORDAL_HOLD     // Constrains holds to opposite-hand combinations.
+//-> feels clunky,disabling
 // Consider also:
-// #define FLOW_TAP_TERM 150 // Disables holds when typing quickly.
+#define FLOW_TAP_TERM 150 // Disables holds when typing quickly.
 
 //keyboard
 #define MK_3_SPEED//3 speed mode instead of accel
 
 // ---- Cursor: pixels per step / ms between steps ----
 // ACL0
-#define MK_C_OFFSET_0   8    // default 1
+#define MK_C_OFFSET_0   4    // default 1
 #define MK_C_INTERVAL_0 16   // default 32
 // ACL1
 #define MK_C_OFFSET_1   12   // default 4
@@ -36,6 +38,9 @@
 // ACL2 (unchanged)
 #define MK_W_OFFSET_2   1    // default 1
 #define MK_W_INTERVAL_2 20   // default 20
+
+//multiple base layers
+#define SPLIT_LAYER_STATE_ENABLE
 
 //features
 #define RGB_MATRIX_SLEEP
